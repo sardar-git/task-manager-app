@@ -24,6 +24,7 @@ function addTask() {
   }
 
   createTaskElement(taskText);
+
   saveTask(taskText);
 
   taskInput.value = "";
@@ -64,9 +65,12 @@ function deleteTask(button) {
 function toggleComplete(task) {
 
   if (task.style.textDecoration === "line-through") {
+
     task.style.textDecoration = "none";
     task.style.color = "black";
+
   } else {
+
     task.style.textDecoration = "line-through";
     task.style.color = "gray";
   }
@@ -110,7 +114,6 @@ function clearAllTasks() {
 
 function updateTaskCount() {
 
-  const totalTasks = taskList.children.length;
-
-  taskCount.innerText = `Total Tasks: ${totalTasks}`;
+  taskCount.innerText =
+    `Total Tasks: ${taskList.children.length}`;
 }
